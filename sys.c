@@ -64,7 +64,7 @@ void putch(char ch) {
       }
       return;
   }
-  if(ch==10) //enter
+  if(ch == 10 || ch == 13) //enter
   {
       new_line();
       return;

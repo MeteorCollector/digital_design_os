@@ -1,7 +1,7 @@
 #include "sys.h"
 
 
-char hello[]="Hello World 2022 (  = w = )\n";
+char hello[]="Hello World 2022 (  = w = )\nContratulations! Displayed successfully.\nNow try typing:\n";
 
 int main();
 
@@ -20,6 +20,7 @@ int main()
     putstr(hello);
     while (1)
     {
+        putch(wait_keyboard);
     };
     return 0;
 }

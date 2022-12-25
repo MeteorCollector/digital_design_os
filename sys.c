@@ -9,12 +9,12 @@ int charcnt[VGA_MAXLINE];
 
 void vga_init(){
     vga_line = 0;
-    vga_ch =0;
+    vga_ch = 0;
     for(int i=0;i<VGA_MAXLINE;i++)
     {
         charcnt[i] = 0;
         for(int j=0;j<VGA_MAXCOL;j++)
-            vga_start[(i << 7) + j] = 0;
+            vga_start[(i << 7) + j] = '.'; // for debugging
     }
 }
 

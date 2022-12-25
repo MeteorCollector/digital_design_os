@@ -1,10 +1,10 @@
 #include "sys.h"
 
-static char* queue_front = KBD_START;
+static char* queue_front = (char*) KBD_START;
 
 void ptrmov()
 {
-    queue_front = (queue_front == KBD_END) ? KBD_START : queue_front + 1; 
+    queue_front = (queue_front == (char*) KBD_END) ? (char*) KBD_START : queue_front + 1; 
 }
 
 char wait_keyboard(void)
@@ -18,8 +18,7 @@ char wait_keyboard(void)
 
 char get_keyboard(void)
 {
-    char ret;
-    char *ptr = KBD_START;
-    while (ptr <= KBD_END) { if (*ptr != 0) return *ptr; }
+    char *ptr = (char*) KBD_START;
+    while (ptr <= (char*) KBD_END) { if (*ptr != 0) return *ptr; }
     return 0;
 }
